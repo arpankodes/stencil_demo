@@ -7,9 +7,16 @@
 
     <script type="module" src="/build/stencil-demo.esm.js"></script>
     <script nomodule src="/build/stencil-demo.js"></script>
+    <script>
+      setTimeout(function() {
+        let myRatingComponent = document.getElementById("myRatingComponent");
+        myRatingComponent.value = 4;
+      }, 5000)
+    </script>
   </head>
   <body>
     <!-- camel case properties in .tsx need to be used with hyphen and all lower case -->
-    <my-card user-name="potato"></my-card>
+    <!-- <my-card user-name="potato"></my-card> -->
+    <rating-component id="myRatingComponent" max-value="6" value="1" ></rating-component>
   </body>
 </html>
